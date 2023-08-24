@@ -14,3 +14,9 @@ sky:
 #    username: root
 #    password: JRd4XzGWCzeQvqMX
 #    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  alioss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: LTAI5tPeFLzsPPT8gG3LPW64
+    access-key-secret: U6k1brOZ8gaOIXv3nXbulGTUzy6Pd7
+    bucket-name: sky-itcast
