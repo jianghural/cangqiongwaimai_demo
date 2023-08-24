@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+import java.util.List;
 
 /**
  * @author awl
@@ -46,6 +47,19 @@ public class DishController {
         log.info("菜品分页查询:{}",dishPageQueryDTO);
         PageResult pageResult = dishService.pageQuery(dishPageQueryDTO);
         return Result.success(pageResult);
+    }
+
+    /**
+     * 删除菜品
+     * @param ids
+     * @return
+     */
+    @DeleteMapping
+    @ApiOperation("菜品批量删除")
+    public Result delete(@RequestParam List<Long> ids){
+        log.info("菜品批量删除:{}",ids);
+        dishService.deleteBatch(ids);
+        return Result.success();
     }
 
 }
