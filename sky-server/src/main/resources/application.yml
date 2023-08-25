@@ -17,6 +17,8 @@ spring:
     port: ${sky.redis.port}
     password: ${sky.redis.password}
     database: ${sky.redis.database}
+    lettuce:
+      shutdown-timeout: 100 #解决"远程主机强迫关闭了一个现有的连接。", redis配置文件tcp-keepalive改成50 超时关闭时长>存活时长
 
 mybatis:
   #mapper配置文件
@@ -43,9 +45,16 @@ sky:
     admin-ttl: 72000000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+    user-secret-key: itheima
+    user-ttl: 72000000
+    user-token-name: authentication
 
   alioss:
     endpoint: ${sky.alioss.endpoint}
     access-key-id: ${sky.alioss.access-key-secret}
     access-key-secret: ${sky.alioss.access-key-secret}
     bucket-name: ${sky.alioss.bucket-name}
+
+  wechat:
+    appid: ${sky.wechat.appid}
+    secret: ${sky.wechat.secret}
