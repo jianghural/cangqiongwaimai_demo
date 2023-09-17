@@ -20,4 +20,7 @@ public class OrderPaymentVO implements Serializable {
     private String signType; //签名算法
     private String packageStr; //统一下单接口返回的 prepay_id 参数值
 
+
+    private String outTradeNo; //商户平台订单号, 不使用微信支付, 代替微信支付回调支付成功接口使用
+
 }
