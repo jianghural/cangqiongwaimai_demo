@@ -1,6 +1,6 @@
 package com.sky.taskdemo;
 
-import com.sky.websocket.WebSocketServerDemo;
+import com.sky.websocket.WebSocketServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -12,11 +12,11 @@ import java.time.format.DateTimeFormatter;
  * @author awl
  * @date 2023/9/24 22:45
  */
-@Component
+//@Component
 public class WebSocketTaskDemo {
 
     @Autowired
-    private WebSocketServerDemo webSocketServerDemo;
+    private WebSocketServer webSocketServerDemo;
 
     /**
      * 通过WebSocket每隔5秒向客户端发送消息
